@@ -114,14 +114,13 @@
        Poesia e música
       </span>
      </div>
-     <a class="btn btn-dourado" href="#sobre">
-      Descobrir o período ↓
-     </a>
+     <button class="btn btn-dourado" id="botao-conteudo" type="button" aria-controls="conteudo-trovadorismo" aria-expanded="false">Descobrir o período ↓</button>
      <div aria-hidden="true" class="detalhe-ornamento">
       ❦
      </div>
     </div>
    </section>
+   <div id="conteudo-trovadorismo" hidden>
    <section class="detalhe-secao" id="sobre">
     <div class="container detalhe-grid">
      <div class="detalhe-apresentacao">
@@ -284,6 +283,10 @@
      </div>
     </div>
    </section>
+   <div class="container detalhe-acoes">
+    <button class="btn btn-recolher mb-3" id="botao-recolher-conteudo" type="button" aria-controls="conteudo-trovadorismo" aria-expanded="true">↑ Recolher conteúdo</button>
+   </div>
+  </div>
    <section class="detalhe-proximo">
     <div class="container detalhe-proximo-inner">
      <div>
@@ -317,5 +320,26 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
   </script>
+
+   <script>
+    (() => {
+      const conteudo = document.getElementById('conteudo-trovadorismo');
+      const abrir = document.getElementById('botao-conteudo');
+      const recolher = document.getElementById('botao-recolher-conteudo');
+      const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const moverPara = (elemento) => elemento.scrollIntoView({
+        behavior: reduzirMovimento.matches ? 'auto' : 'smooth', block: 'start'
+      });
+      function alternar(expandido) {
+        conteudo.hidden = !expandido;
+        abrir.setAttribute('aria-expanded', String(expandido));
+        recolher.setAttribute('aria-expanded', String(expandido));
+        abrir.textContent = expandido ? 'Recolher o conteúdo ↑' : 'Descobrir o período ↓';
+        requestAnimationFrame(() => moverPara(expandido ? document.getElementById('sobre') : document.querySelector('.detalhe-hero')));
+      }
+      abrir.addEventListener('click', () => alternar(conteudo.hidden));
+      recolher.addEventListener('click', () => alternar(false));
+    })();
+   </script>
  </body>
 </html>
