@@ -1,153 +1,136 @@
-/* ===== GERAL ===== */
-/* #1A1210 é o fundo do site (mais escuro que o Trovadorismo, para ele não se misturar com a apresentação) */
-body {
-  background-color: #1A1210;
-  color: #EAE2CF;
-  font-family: Georgia, serif;
-  font-size: 18px;
+/* PALETA: tinta #191714 | pergaminho #f5f0e7 | dourado #c6a56b */
+:root { --bg:#191714; --bg2:#211e1a; --card:#29251f; --cream:#f5f0e7; --muted:#c1b6a5; --gold:#c6a56b; --line:rgba(198,165,107,.35); }
+html {scroll-behavior:smooth;scroll-padding-top:86px}
+body {margin:0; background:var(--bg);color:var(--cream);font-family:'DM Sans',Arial,sans-serif;font-size:16px;line-height:1.75}
+h1,h2,.navbar-brand {font-family:'Playfair Display',Georgia,serif}
+a {color:var(--gold)}
+a:hover {color:var(--cream)}
+::selection {background:var(--gold);color:var(--bg)}
+.navbar {background:rgba(25,23,20,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 5px 30px rgba(0,0,0,.12)}
+.navbar-brand {color:var(--cream)!important;font-size:1.25rem;font-weight:600;white-space:normal}
+.navbar-nav {gap:2px}
+.navbar .navbar-nav .nav-link {color:#d4c9b8;font-size:.78rem;font-weight:600;padding:.48rem .54rem;transition:color .2s ease,background .2s ease;border-radius:7px}
+.navbar .navbar-nav .nav-link:hover,.navbar .navbar-nav .nav-link.active {color:var(--gold);background:rgba(198,165,107,.09)}
+.navbar-toggler {border-color:var(--line)}
+.topo {position:relative;isolation:isolate;overflow:hidden;padding:clamp(95px,12vw,170px) 0 110px;background:radial-gradient(ellipse at 78% 25%,rgba(198,165,107,.13),transparent 43%),linear-gradient(130deg,#191714,#28211b 70%,#1d1a17)}
+.topo::after {content:'“';position:absolute;right:7%;top:5%;font:clamp(250px,38vw,550px)/1 Georgia,serif;color:rgba(198,165,107,.075);pointer-events:none;z-index:-1}
+.topo .container {max-width:1140px}
+.eyebrow {display:inline-block;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--gold);margin-bottom:20px}
+.topo h1 {max-width:760px;font-size:clamp(3rem,6.6vw,6rem);line-height:1.12;letter-spacing:-.035em;margin-bottom:27px;font-weight:600}
+.topo p {max-width:630px;color:#d8ccbb;font-size:clamp(1rem,1.7vw,1.15rem);line-height:1.9;margin-bottom:32px}
+.btn-dourado,.btn-saiba {border-radius:7px;padding:12px 22px;font-weight:700;letter-spacing:.01em;text-decoration:none;transition:transform .25s ease,background-color .25s ease,border-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-dourado {color:#241e17;background:var(--gold);border:1px solid var(--gold)}
+.btn-dourado:hover {background:#e5c58f;border-color:#e5c58f;color:#241e17;transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.hero-meta {display:flex;flex-wrap:wrap;align-items:center;gap:17px;color:#bcb0a0;font-size:.83rem;margin-top:55px}
+.meta-divider {height:5px;width:5px;border-radius:50%;background:var(--gold)}
+#periodos {padding-top:75px;background:linear-gradient(180deg,#211e1a,#191714)}
+.section-intro {padding-bottom:50px;max-width:1140px}
+.section-intro h2 {font-size:clamp(2rem,4vw,3.25rem);line-height:1.2;margin-bottom:15px}
+.section-intro p {color:var(--muted);max-width:590px;margin:0}
+.periodo {color:var(--cream);background:transparent!important;padding:0}
+.periodo .container {position:relative;padding:0 12px 32px 88px;max-width:1140px}
+.periodo .container::before {content:'';position:absolute;left:35px;top:0;bottom:0;width:2px;background:var(--line)}
+.periodo:first-of-type .container::before {top:22px}
+.periodo .container::after {content:'';position:absolute;left:26px;top:35px;width:20px;height:20px;border-radius:50%;background:var(--gold);border:5px solid var(--bg2);box-shadow:0 0 0 1px var(--gold);z-index:2;transition:transform .3s ease,box-shadow .3s ease}
+.periodo:hover .container::after {transform:scale(1.18);box-shadow:0 0 0 6px rgba(198,165,107,.12)}
+.periodo-card {padding:30px clamp(24px,4vw,48px) 34px;border:1px solid rgba(198,165,107,.16);border-radius:14px;background:linear-gradient(115deg,#2d2821,#24211d);box-shadow:0 12px 32px rgba(0,0,0,.10);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.periodo-card:hover {transform:translateY(-4px);border-color:var(--line);box-shadow:0 18px 36px rgba(0,0,0,.22)}
+.numero {color:var(--gold);letter-spacing:.18em;font-size:.71rem;font-weight:700}
+.periodo h2 {font-size:clamp(1.8rem,3.5vw,2.65rem);margin:6px 0 2px;line-height:1.25}
+.datas {display:inline-block;color:#edd2a4;font-weight:700;font-size:.93rem;letter-spacing:.04em;margin:8px 0 18px;padding:4px 12px;border-radius:5px;background:rgba(198,165,107,.12)}
+.periodo-card p:not(.datas) {max-width:740px;color:#e2d9cb;margin-bottom:12px}
+.periodo-card .autores {color:#bdaf9c!important;font-size:.92rem;margin-top:18px}
+.btn-saiba {display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:.9rem;margin-top:16px}
+.btn-saiba:hover {background:var(--gold);color:#241e17;transform:translateY(-2px)}
+/* Tons suaves distinguem os capítulos sem prejudicar legibilidade */
+.trovadorismo .periodo-card {background:linear-gradient(110deg,#2c2624,#24211e)}
+.humanismo .periodo-card {background:linear-gradient(110deg,#302820,#24211e)}
+.classicismo .periodo-card {background:linear-gradient(110deg,#2c2c26,#24211e)}
+.quinhentismo .periodo-card {background:linear-gradient(110deg,#302824,#24211e)}
+.barroco .periodo-card {background:linear-gradient(110deg,#352721,#24211e)}
+.arcadismo .periodo-card {background:linear-gradient(110deg,#293028,#24211e)}
+.romantismo .periodo-card {background:linear-gradient(110deg,#33262c,#24211e)}
+.realismo .periodo-card {background:linear-gradient(110deg,#292c31,#24211e)}
+.naturalismo .periodo-card {background:linear-gradient(110deg,#2a302c,#24211e)}
+.parnasianismo .periodo-card {background:linear-gradient(110deg,#2e2931,#24211e)}
+/* Animações CSS suaves: nunca dependem do JavaScript para mostrar os textos */
+@media (prefers-reduced-motion: no-preference) {
+ .topo .container {animation:appear .8s ease both}
+ .periodo[data-reveal] .periodo-card {animation:none}
+ .periodo[data-reveal].is-visible .periodo-card {animation:appear .65s ease both}
+ @keyframes appear {from {opacity:.2;transform:translateY(18px)}to {opacity:1;transform:translateY(0)}}
 }
+footer {border-top:1px solid var(--line);padding:34px 0 23px;background:var(--bg);text-align:center;color:var(--muted);font-size:.85rem}
+footer p {margin:0}
+:focus-visible {outline:3px solid #f0ca8c!important;outline-offset:3px}
+@media (max-width:1199px) {.navbar-collapse {padding:18px 0 10px}.navbar-nav {display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:5px}.navbar .navbar-nav .nav-link {padding:9px 11px}}
+@media (max-width:600px) {.topo {padding:84px 0 80px}.topo h1 {font-size:2.85rem}.hero-meta {margin-top:35px}.periodo .container {padding-left:56px;padding-right:15px;padding-bottom:20px}.periodo .container::before {left:27px}.periodo .container::after {left:18px}.periodo-card {padding:23px 20px 26px}#periodos {padding-top:55px}.section-intro {padding-bottom:35px}}
+@media (prefers-reduced-motion:reduce) {html {scroll-behavior:auto}*,*::before,*::after {animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
-/* links em dourado */
-a {
-  color: #B08D57;
-}
-
-a:hover {
-  color: #EAE2CF;
-}
-
-
-/* ===== MENU ===== */
-.navbar {
-  background-color: #1A1210;
-  border-bottom: 1px solid #B08D57;
-}
-
-.navbar-brand {
-  color: #B08D57;
-}
-
-.nav-link {
-  color: #EAE2CF;
-}
-
-/* tamanho das letras do menu */
-.navbar .navbar-nav .nav-link {
-  font-size: 17px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.nav-link:hover {
-  color: #B08D57;
-}
-
-/* link da página atual */
-.nav-link.active {
-  color: #B08D57;
-  border-bottom: 2px solid #B08D57;
-}
+/* Controle expansível da linha do tempo */
+#periodos[hidden] {display:none!important}
+button.btn-dourado {cursor:pointer}
+#periodos:not([hidden]) {animation:timeline-in .48s ease-out both}
+@keyframes timeline-in {from {opacity:0;transform:translateY(-12px)}to {opacity:1;transform:translateY(0)}}
+.timeline-actions {padding:18px 12px 85px 88px;max-width:1140px}
+.btn-recolher {display:inline-block;border:1px solid var(--gold);color:var(--gold);background:transparent;border-radius:7px;font-weight:700;padding:12px 22px;transition:background .25s ease,transform .25s ease,color .25s ease}
+.btn-recolher:hover {background:var(--gold);color:var(--bg);transform:translateY(-2px)}
+/* Espaço para a fotografia da turma, independente da linha do tempo */
+.turma {scroll-margin-top:86px;padding:clamp(65px,8vw,115px) 0;background:linear-gradient(145deg,#26221d,#191714);border-top:1px solid var(--line)}
+.turma-layout {max-width:1140px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(28px,5vw,80px);align-items:center}
+.turma h2 {font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.18;margin-bottom:18px}
+.turma p {color:var(--muted);max-width:400px}
+.turma-foto {aspect-ratio: 16/10;min-height:270px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#332a22,#26211d);box-shadow:0 16px 35px rgba(0,0,0,.18)}
+.turma-foto img {display:block;width:100%;height:100%;object-fit:cover}
+.foto-placeholder {width:100%;height:100%;min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:35px;text-align:center;color:var(--muted)}
+.foto-placeholder strong {font-size:1.1rem;color:var(--cream)}
+.foto-placeholder span:last-child {font-size:.9rem}
+.foto-icon {font-family:Georgia,serif;font-size:4rem;line-height:1;color:var(--gold)}
+@media(max-width:750px) {.turma-layout {grid-template-columns:1fr}.timeline-actions {padding-left:56px}.turma-foto {min-height:220px}}
+@media(prefers-reduced-motion:reduce) {#periodos:not([hidden]) {animation:none}}
 
 
-/* ===== APRESENTAÇÃO ===== */
-.topo {
-  background-color: #1A1210;
-  padding: 80px 0;
-}
-
-.topo h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-/* botão dourado */
-.btn-dourado {
-  background-color: #B08D57;
-  color: #241A17;
-}
-
-.btn-dourado:hover {
-  background-color: #EAE2CF;
-  color: #241A17;
-}
-
-
-/* ===== PERÍODOS ===== */
-.periodo {
-  padding: 50px 0;
-  color: #EAE2CF;
-}
-
-/* cor de fundo de cada período */
-.trovadorismo { background-color: #241A17; }
-.humanismo    { background-color: #2E211C; }
-.classicismo  { background-color: #3A2921; }
-.quinhentismo { background-color: #472F26; }
-.barroco      { background-color: #55372B; }
-.arcadismo    { background-color: #644030; }
-.romantismo   { background-color: #734935; }
-.realismo     { background-color: #7A4E39; }
-.naturalismo  { background-color: #815340; }
-.parnasianismo { background-color: #895943; }
-
-.datas {
-  color: #B08D57;
-  font-size: 20px;
-}
-
-
-/* botão "Saiba mais": só a borda dourada, preenche ao passar o mouse */
-.btn-saiba {
-  border: 2px solid #B08D57;
-  color: #B08D57;
-  border-radius: 20px;
-  padding: 8px 24px;
-  margin-top: 10px;
-}
-
-.btn-saiba:hover {
-  background-color: #B08D57;
-  border-color: #B08D57;
-  color: #241A17;
-}
-
-
-/* ===== LINHA DO TEMPO ===== */
-/* espaço à esquerda para a linha e a bolinha */
-.periodo .container {
-  position: relative;
-  padding-left: 60px;
-}
-
-/* linha vertical dourada (atravessa o espaço de cima e de baixo para emendar com a próxima faixa) */
-.periodo .container::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: -50px;
-  bottom: -50px;
-  width: 3px;
-  background-color: #B08D57;
-}
-
-/* bolinha de cada período */
-.periodo .container::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 8px;
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  background-color: #B08D57;
-  border: 4px solid #EAE2CF;
-}
-
-
-/* ===== RODAPÉ ===== */
-footer {
-  background-color: #1A1210;
-  border-top: 1px solid #B08D57;
-  padding: 20px 0;
-  text-align: center;
-}
+/* ===== PÁGINAS INTERNAS: IDENTIDADE VISUAL COMPARTILHADA ===== */
+.pagina-periodo { background:var(--bg); }
+.detalhe-hero {position:relative;overflow:hidden;isolation:isolate;padding:60px 0 106px;background:radial-gradient(ellipse at 82% 35%,rgba(198,165,107,.14),transparent 45%),linear-gradient(128deg,#191714,#2c2520 72%,#1d1a17);border-bottom:1px solid var(--line)}
+.detalhe-hero-inner {position:relative;max-width:1140px;z-index:1}
+.voltar-link {display:inline-block;color:var(--muted);font-size:.88rem;text-decoration:none;margin-bottom:68px;transition:color .2s ease,transform .2s ease}
+.voltar-link:hover {color:var(--gold);transform:translateX(-3px)}
+.detalhe-hero .eyebrow {display:block}
+.detalhe-hero h1 {font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.8rem,9vw,8rem);font-weight:600;letter-spacing:-.05em;line-height:1.1;margin:0 0 20px}
+.titulo-ponto {color:var(--gold)}
+.detalhe-lead {max-width:720px;color:#dfd5c7;font-size:clamp(1.05rem,1.9vw,1.25rem);line-height:1.85;margin-bottom:28px}
+.detalhe-meta {display:flex;flex-wrap:wrap;gap:10px;margin-bottom:35px}
+.detalhe-meta span {font-size:.81rem;letter-spacing:.05em;color:#ead4ae;background:rgba(198,165,107,.1);border:1px solid var(--line);padding:7px 13px;border-radius:50px}
+.detalhe-ornamento {position:absolute;right:4%;top:24%;font:clamp(12rem,32vw,27rem)/1 Georgia,serif;color:rgba(198,165,107,.065);z-index:-1;pointer-events:none}
+.detalhe-secao {padding:clamp(66px,9vw,112px) 0;scroll-margin-top:85px}
+.detalhe-secao-alternada {background:var(--bg2);border-top:1px solid rgba(198,165,107,.1);border-bottom:1px solid rgba(198,165,107,.1)}
+.detalhe-grid {display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(30px,7vw,95px);align-items:center}
+.detalhe-secao h2,.detalhe-proximo h2 {font-size:clamp(2.1rem,4.1vw,3.65rem);line-height:1.2;letter-spacing:-.027em;margin-bottom:25px}
+.detalhe-secao h2 em {color:var(--gold);font-style:normal}
+.detalhe-apresentacao p,.detalhe-texto,.detalhe-heading p,.detalhe-proximo p {color:var(--muted);font-size:1.02rem;line-height:1.95}
+.detalhe-apresentacao strong {color:var(--cream)}
+.detalhe-info {background:linear-gradient(135deg,#302920,#24211d);border:1px solid var(--line);border-radius:16px;padding:clamp(25px,4vw,43px);box-shadow:0 15px 40px rgba(0,0,0,.16)}
+.detalhe-info dl {margin:0}
+.detalhe-info dl>div {padding:15px 0;border-top:1px solid rgba(198,165,107,.2)}
+.detalhe-info dt {font-size:.77rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.detalhe-info dd {margin:5px 0 0;color:var(--cream);font-size:1.02rem}
+.detalhe-heading {max-width:720px;margin-bottom:36px}
+.cantigas-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.cantiga-card {padding:clamp(24px,4vw,38px);border:1px solid rgba(198,165,107,.2);border-radius:14px;background:linear-gradient(125deg,#302920,#26221d);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.cantiga-card:hover {transform:translateY(-5px);border-color:var(--gold);box-shadow:0 16px 28px rgba(0,0,0,.2)}
+.cantiga-card h3 {font:600 clamp(1.45rem,2.6vw,2rem)/1.3 'Playfair Display',Georgia,serif;margin:12px 0 14px}
+.cantiga-card p {color:var(--muted);margin:0}
+.autores-lista {display:flex;flex-direction:column;gap:13px;margin-top:25px}
+.autores-lista span {border-left:3px solid var(--gold);padding:10px 18px;background:rgba(198,165,107,.07);border-radius:0 7px 7px 0}
+.detalhe-citacao {border:1px solid var(--line);border-radius:15px;padding:34px;background:var(--card)}
+.detalhe-citacao>span {font:6rem/1 Georgia,serif;color:var(--gold)}
+.detalhe-citacao p {font:500 clamp(1.35rem,2.4vw,1.9rem)/1.5 'Playfair Display',Georgia,serif;margin:0 0 16px}
+.detalhe-citacao small {color:var(--muted)}
+.detalhe-proximo {padding:70px 0 35px;border-top:1px solid var(--line);background:radial-gradient(ellipse at 80% 40%,rgba(198,165,107,.1),transparent 50%),#211e1a}
+.detalhe-proximo-inner {display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:35px}
+.detalhe-proximo h2 {margin:5px 0 8px}
+.detalhe-proximo p {margin:0}
+.detalhe-proximo .voltar-link {margin:0}
+@media(max-width:750px){.detalhe-grid,.cantigas-grid {grid-template-columns:1fr}.detalhe-hero {padding:36px 0 75px}.voltar-link {margin-bottom:44px}.detalhe-ornamento {right:-10%;top:35%;opacity:.5}.detalhe-proximo-inner {align-items:flex-start;flex-direction:column}.detalhe-secao {padding:65px 0}}
+@media(prefers-reduced-motion:no-preference){.detalhe-hero-inner {animation:appear .8s ease both}}

@@ -1,175 +1,209 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Períodos Literários - teste</title>
-
-  <!-- Bootstrap 5.2.3 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Meu CSS (fica depois do Bootstrap) -->
-  <link href="style.css" rel="stylesheet">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Períodos Literários | Uma viagem pela história</title>
+<!-- Bootstrap 5.2.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Meu CSS (fica depois do Bootstrap) -->
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/></head>
 <body>
+<!-- MENU -->
+<nav class="navbar navbar-expand-xl navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="index.html">✦  Períodos Literários</a>
+<!-- Botão do menu no celular -->
+<button aria-label="Abrir menu de navegação" class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+<li class="nav-item"><a class="nav-link" href="trovadorismo.html">Trovadorismo</a></li>
+<li class="nav-item"><a class="nav-link" href="humanismo.html">Humanismo</a></li>
+<li class="nav-item"><a class="nav-link" href="classicismo.html">Classicismo</a></li>
+<li class="nav-item"><a class="nav-link" href="quinhentismo.html">Quinhentismo</a></li>
+<li class="nav-item"><a class="nav-link" href="barroco.html">Barroco</a></li>
+<li class="nav-item"><a class="nav-link" href="arcadismo.html">Arcadismo</a></li>
+<li class="nav-item"><a class="nav-link" href="romantismo.html">Romantismo</a></li>
+<li class="nav-item"><a class="nav-link" href="realismo.html">Realismo</a></li>
+<li class="nav-item"><a class="nav-link" href="naturalismo.html">Naturalismo</a></li>
+<li class="nav-item"><a class="nav-link" href="parnasianismo.html">Parnasianismo</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- APRESENTAÇÃO -->
+<section class="topo">
+<div class="container"><span class="eyebrow">LITERATURA ATRAVÉS DOS SÉCULOS</span>
+<h1>As palavras atravessam o tempo.</h1>
+<p>Conheça os movimentos que transformaram a forma de escrever, pensar e interpretar o mundo. Uma viagem pelas ideias, pelos autores e pelas obras que marcaram nossa história.</p>
+<button aria-controls="periodos" aria-expanded="false" class="btn btn-dourado timeline-toggle" id="botao-periodos" type="button">Explorar a linha do tempo  ↓</button>
+<div class="hero-meta"><span>10 movimentos literários</span><span class="meta-divider"></span><span>Da Idade Média ao século XIX</span></div></div>
+</section>
+<!-- PERÍODOS (cada um tem uma cor de fundo diferente) -->
+<section aria-label="Linha do tempo dos períodos literários" hidden="" id="periodos"><div class="container section-intro"><span class="eyebrow">PERCURSO HISTÓRICO</span><h2>Uma história, muitos movimentos.</h2><p>Explore cada período e descubra como a literatura acompanhou as transformações da sociedade.</p></div>
+<div class="periodo trovadorismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 01</span><h2>Trovadorismo</h2>
+<p class="datas">1189 a 1418</p>
+<p>Poesia cantada nas cortes medievais, com as cantigas de amor, de amigo, de escárnio e de maldizer.</p>
+<p class="autores">Autores: Dom Dinis, Paio Soares de Taveirós, Martim Codax</p>
+<a class="btn btn-saiba" href="trovadorismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo humanismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 02</span><h2>Humanismo</h2>
+<p class="datas">1418 a 1527</p>
+<p>Passagem da Idade Média para o Renascimento, com a prosa histórica e o teatro popular.</p>
+<p class="autores">Autores: Fernão Lopes, Gil Vicente</p>
+<a class="btn btn-saiba" href="humanismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo classicismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 03</span><h2>Classicismo</h2>
+<p class="datas">1527 a 1580</p>
+<p>Volta aos modelos da Antiguidade clássica, com equilíbrio, razão e o uso do soneto.</p>
+<p class="autores">Autores: Luís de Camões, Sá de Miranda</p>
+<a class="btn btn-saiba" href="classicismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo quinhentismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 04</span><h2>Quinhentismo</h2>
+<p class="datas">1500 a 1601</p>
+<p>Primeiros textos escritos no Brasil, como cartas, crônicas de viagem e textos de catequese.</p>
+<p class="autores">Autores: Pero Vaz de Caminha, José de Anchieta</p>
+<a class="btn btn-saiba" href="quinhentismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo barroco" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 05</span><h2>Barroco</h2>
+<p class="datas">1601 a 1768</p>
+<p>Marcado pelo conflito entre fé e prazer, com linguagem rebuscada e muitos contrastes.</p>
+<p class="autores">Autores: Padre Antônio Vieira, Gregório de Matos</p>
+<a class="btn btn-saiba" href="barroco.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo arcadismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 06</span><h2>Arcadismo</h2>
+<p class="datas">1768 a 1836</p>
+<p>Valoriza a vida simples no campo, a natureza e a inspiração clássica.</p>
+<p class="autores">Autores: Cláudio Manuel da Costa, Tomás Antônio Gonzaga</p>
+<a class="btn btn-saiba" href="arcadismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo romantismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 07</span><h2>Romantismo</h2>
+<p class="datas">1836 a 1881</p>
+<p>Valoriza a emoção, o nacionalismo e a idealização do amor e do herói.</p>
+<p class="autores">Autores: Gonçalves Dias, José de Alencar, Castro Alves</p>
+<a class="btn btn-saiba" href="romantismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo realismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 08</span><h2>Realismo</h2>
+<p class="datas">1881 a 1893</p>
+<p>Retrata a sociedade como ela é, com crítica social, análise psicológica e linguagem objetiva.</p>
+<p class="autores">Autores: Machado de Assis, Eça de Queirós, Raul Pompeia</p>
+<a class="btn btn-saiba" href="realismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo naturalismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 09</span><h2>Naturalismo</h2>
+<p class="datas">1881 a 1893</p>
+<p>Explica o comportamento humano pela ciência, pelo meio e pela hereditariedade, com descrições detalhadas e fortes.</p>
+<p class="autores">Autores: Aluísio Azevedo, Adolfo Caminha, Júlio Ribeiro</p>
+<a class="btn btn-saiba" href="naturalismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="periodo parnasianismo" data-reveal="">
+<div class="container"><div class="periodo-card">
+<span class="numero">CAPÍTULO 10</span><h2>Parnasianismo</h2>
+<p class="datas">1882 a 1893</p>
+<p>Poesia que valoriza a perfeição da forma, o vocabulário culto e a "arte pela arte".</p>
+<p class="autores">Autores: Olavo Bilac, Alberto de Oliveira, Raimundo Correia</p>
+<a class="btn btn-saiba" href="parnasianismo.html">Conhecer o período  ↗</a>
+</div></div>
+</div>
+<div class="container timeline-actions"><button aria-controls="periodos" aria-expanded="true" class="btn btn-recolher timeline-toggle" type="button">↑ Recolher linha do tempo</button></div></section>
+<section aria-labelledby="titulo-turma" class="turma" id="turma">
+<div class="container turma-layout">
+<div class="turma-copy"><span class="eyebrow">NOSSA HISTÓRIA</span>
+<h2 id="titulo-turma">Uma turma, muitas histórias.</h2>
+<p>Um espaço especial para registrar quem fez parte deste projeto.</p>
+</div>
+<div class="turma-foto" id="turma-foto">
+<div class="foto-placeholder" role="note">
+<span aria-hidden="true" class="foto-icon">✦</span>
+<strong>A foto da turma ficará aqui</strong>
+<span>Adicione sua foto ao projeto quando estiver pronta.</span>
+</div>
+<!-- Para usar a foto, substitua a div .foto-placeholder acima por:
+      <img src="foto-turma.jpg" alt="Fotografia da turma responsável pelo projeto" loading="lazy">
+      -->
+</div>
+</div>
+</section>
 
-  <!-- MENU -->
-  <nav class="navbar navbar-expand-xxl navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Períodos Literários</a>
+<!-- RODAPÉ -->
+<footer>
+<div class="container">
+<p>Períodos Literários · Uma viagem pela história da literatura</p>
+</div>
+</footer>
+<!-- JavaScript do Bootstrap (faz o menu abrir no celular) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>// Alterna a linha do tempo inteira, mantendo a seção da turma sempre acessível.
+const timeline = document.getElementById('periodos');
+const openingButton = document.getElementById('botao-periodos');
+const closingButton = document.querySelector('.btn-recolher');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const photoSection = document.getElementById('turma');
 
-      <!-- Botão do menu no celular -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+function toggleTimeline(open) {
+  timeline.hidden = !open;
+  openingButton.setAttribute('aria-expanded', String(open));
+  openingButton.textContent = open ? 'Recolher a linha do tempo  ↑' : 'Explorar a linha do tempo  ↓';
+  if (open) {
+    // Reativa o efeito de entrada para os cartões ao abrir.
+    document.querySelectorAll('[data-reveal]').forEach(el => el.classList.remove('is-visible'));
+    requestAnimationFrame(() => {
+      setupTimelineReveal();
+      timeline.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
+    });
+  } else {
+    // Traz a seção seguinte para perto do visitante após recolher.
+    photoSection.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
+  }
+}
 
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="trovadorismo.html">Trovadorismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="humanismo.html">Humanismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="classicismo.html">Classicismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="quinhentismo.html">Quinhentismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="barroco.html">Barroco</a></li>
-          <li class="nav-item"><a class="nav-link" href="arcadismo.html">Arcadismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="romantismo.html">Romantismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="realismo.html">Realismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="naturalismo.html">Naturalismo</a></li>
-          <li class="nav-item"><a class="nav-link" href="parnasianismo.html">Parnasianismo</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+openingButton.addEventListener('click', () => toggleTimeline(timeline.hidden));
+closingButton.addEventListener('click', () => toggleTimeline(false));
 
-  <!-- APRESENTAÇÃO -->
-  <section class="topo">
-    <div class="container">
-      <h1>Períodos Literários</h1>
-      <p>
-        Os períodos literários representam as diferentes fases da literatura ao longo da história, cada uma com
-        suas próprias características, ideias e formas de expressão. Eles são influenciados pelo contexto
-        histórico, pela cultura e pelos acontecimentos de cada época, refletindo a maneira como as pessoas
-        enxergavam o mundo. Conhecer esses períodos é uma forma de entender como a literatura evoluiu com o
-        tempo e como os escritores usaram suas obras para expressar sentimentos, questionar a sociedade e
-        transmitir suas visões de mundo.
-      </p>
-      <a class="btn btn-dourado" href="#periodos">Ver períodos</a>
-    </div>
-  </section>
-
-  <!-- PERÍODOS (cada um tem uma cor de fundo diferente) -->
-  <section id="periodos">
-
-    <div class="periodo trovadorismo">
-      <div class="container">
-        <h2>Trovadorismo</h2>
-        <p class="datas">1189 a 1418</p>
-        <p>Poesia cantada nas cortes medievais, com as cantigas de amor, de amigo, de escárnio e de maldizer.</p>
-        <p>Autores: Dom Dinis, Paio Soares de Taveirós, Martim Codax</p>
-        <a class="btn btn-saiba" href="trovadorismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo humanismo">
-      <div class="container">
-        <h2>Humanismo</h2>
-        <p class="datas">1418 a 1527</p>
-        <p>Passagem da Idade Média para o Renascimento, com a prosa histórica e o teatro popular.</p>
-        <p>Autores: Fernão Lopes, Gil Vicente</p>
-        <a class="btn btn-saiba" href="humanismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo classicismo">
-      <div class="container">
-        <h2>Classicismo</h2>
-        <p class="datas">1527 a 1580</p>
-        <p>Volta aos modelos da Antiguidade clássica, com equilíbrio, razão e o uso do soneto.</p>
-        <p>Autores: Luís de Camões, Sá de Miranda</p>
-        <a class="btn btn-saiba" href="classicismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo quinhentismo">
-      <div class="container">
-        <h2>Quinhentismo</h2>
-        <p class="datas">1500 a 1601</p>
-        <p>Primeiros textos escritos no Brasil, como cartas, crônicas de viagem e textos de catequese.</p>
-        <p>Autores: Pero Vaz de Caminha, José de Anchieta</p>
-        <a class="btn btn-saiba" href="quinhentismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo barroco">
-      <div class="container">
-        <h2>Barroco</h2>
-        <p class="datas">1601 a 1768</p>
-        <p>Marcado pelo conflito entre fé e prazer, com linguagem rebuscada e muitos contrastes.</p>
-        <p>Autores: Padre Antônio Vieira, Gregório de Matos</p>
-        <a class="btn btn-saiba" href="barroco.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo arcadismo">
-      <div class="container">
-        <h2>Arcadismo</h2>
-        <p class="datas">1768 a 1836</p>
-        <p>Valoriza a vida simples no campo, a natureza e a inspiração clássica.</p>
-        <p>Autores: Cláudio Manuel da Costa, Tomás Antônio Gonzaga</p>
-        <a class="btn btn-saiba" href="arcadismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo romantismo">
-      <div class="container">
-        <h2>Romantismo</h2>
-        <p class="datas">1836 a 1881</p>
-        <p>Valoriza a emoção, o nacionalismo e a idealização do amor e do herói.</p>
-        <p>Autores: Gonçalves Dias, José de Alencar, Castro Alves</p>
-        <a class="btn btn-saiba" href="romantismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo realismo">
-      <div class="container">
-        <h2>Realismo</h2>
-        <p class="datas">1881 a 1893</p>
-        <p>Retrata a sociedade como ela é, com crítica social, análise psicológica e linguagem objetiva.</p>
-        <p>Autores: Machado de Assis, Eça de Queirós, Raul Pompeia</p>
-        <a class="btn btn-saiba" href="realismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo naturalismo">
-      <div class="container">
-        <h2>Naturalismo</h2>
-        <p class="datas">1881 a 1893</p>
-        <p>Explica o comportamento humano pela ciência, pelo meio e pela hereditariedade, com descrições detalhadas e fortes.</p>
-        <p>Autores: Aluísio Azevedo, Adolfo Caminha, Júlio Ribeiro</p>
-        <a class="btn btn-saiba" href="naturalismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-    <div class="periodo parnasianismo">
-      <div class="container">
-        <h2>Parnasianismo</h2>
-        <p class="datas">1882 a 1893</p>
-        <p>Poesia que valoriza a perfeição da forma, o vocabulário culto e a "arte pela arte".</p>
-        <p>Autores: Olavo Bilac, Alberto de Oliveira, Raimundo Correia</p>
-        <a class="btn btn-saiba" href="parnasianismo.html">Saiba mais</a>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer>
-    <div class="container">
-      <p>Períodos Literários - Projeto escolar</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript do Bootstrap (faz o menu abrir no celular) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+let timelineObserver;
+function setupTimelineReveal() {
+  if (timelineObserver) timelineObserver.disconnect();
+  if (!('IntersectionObserver' in window) || reduceMotion) return;
+  timelineObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        timelineObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.08, rootMargin: '0px 0px 40px 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(el => timelineObserver.observe(el));
+}
+</script></body>
 </html>
