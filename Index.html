@@ -49,7 +49,7 @@
 <span class="numero">CAPÍTULO 01</span><h2>Trovadorismo</h2>
 <p class="datas">1189 a 1418</p>
 <p>Poesia cantada nas cortes medievais, com as cantigas de amor, de amigo, de escárnio e de maldizer.</p>
-<p class="autores">Autores: Dom Dinis, Paio Soares de Taveirós, Martim Codax</p>
+<p class="autores">Autores: Dom Dinis, Martim Codax, Paio Soares de Taveirós</p>
 <a class="btn btn-saiba" href="trovadorismo.html">Conhecer o período  ↗</a>
 </div></div>
 </div>
@@ -66,8 +66,8 @@
 <div class="container"><div class="periodo-card">
 <span class="numero">CAPÍTULO 03</span><h2>Classicismo</h2>
 <p class="datas">1527 a 1580</p>
-<p>Volta aos modelos da Antiguidade clássica, com equilíbrio, razão e o uso do soneto.</p>
-<p class="autores">Autores: Luís de Camões, Sá de Miranda</p>
+<p>Retomada dos modelos greco-romanos, com valorização da razão, do equilíbrio e da perfeição formal, na poesia e na dramaturgia.</p>
+<p class="autores">Autores: Luís de Camões, Francisco de Sá de Miranda, António Ferreira</p>
 <a class="btn btn-saiba" href="classicismo.html">Conhecer o período  ↗</a>
 </div></div>
 </div>
@@ -75,8 +75,8 @@
 <div class="container"><div class="periodo-card">
 <span class="numero">CAPÍTULO 04</span><h2>Quinhentismo</h2>
 <p class="datas">1500 a 1601</p>
-<p>Primeiros textos escritos no Brasil, como cartas, crônicas de viagem e textos de catequese.</p>
-<p class="autores">Autores: Pero Vaz de Caminha, José de Anchieta</p>
+<p>Primeiros textos escritos no Brasil, com a Literatura de Informação, que descrevia a nova terra, e a Literatura de Catequese, voltada à conversão dos povos indígenas.</p>
+<p class="autores">Autores: Pero Vaz de Caminha, José de Anchieta, Pero de Magalhães Gândavo</p>
 <a class="btn btn-saiba" href="quinhentismo.html">Conhecer o período  ↗</a>
 </div></div>
 </div>
@@ -117,25 +117,6 @@
 </div></div>
 </div>
 <div class="container timeline-actions"><button aria-controls="periodos" aria-expanded="true" class="btn btn-recolher timeline-toggle" type="button">↑ Recolher linha do tempo</button></div></section>
-<section aria-labelledby="titulo-turma" class="turma" id="turma">
-<div class="container turma-layout">
-<div class="turma-copy"><span class="eyebrow">NOSSA HISTÓRIA</span>
-<h2 id="titulo-turma">Uma turma, muitas histórias.</h2>
-<p>Um espaço especial para registrar quem fez parte deste projeto.</p>
-</div>
-<div class="turma-foto" id="turma-foto">
-<div class="foto-placeholder" role="note">
-<span aria-hidden="true" class="foto-icon">✦</span>
-<strong>A foto da turma ficará aqui</strong>
-<span>Adicione sua foto ao projeto quando estiver pronta.</span>
-</div>
-<!-- Para usar a foto, substitua a div .foto-placeholder acima por:
-      <img src="foto-turma.jpg" alt="Fotografia da turma responsável pelo projeto" loading="lazy">
-      -->
-</div>
-</div>
-</section>
-
 <!-- RODAPÉ -->
 <footer>
 <div class="container">
@@ -144,12 +125,11 @@
 </footer>
 <!-- JavaScript do Bootstrap (faz o menu abrir no celular) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>// Alterna a linha do tempo inteira, mantendo a seção da turma sempre acessível.
+<script>// Abre e recolhe a linha do tempo inteira.
 const timeline = document.getElementById('periodos');
 const openingButton = document.getElementById('botao-periodos');
 const closingButton = document.querySelector('.btn-recolher');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const photoSection = document.getElementById('turma');
 
 function toggleTimeline(open) {
   timeline.hidden = !open;
@@ -163,8 +143,8 @@ function toggleTimeline(open) {
       timeline.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
     });
   } else {
-    // Traz a seção seguinte para perto do visitante após recolher.
-    photoSection.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
+    // Volta ao topo da página após recolher.
+    document.querySelector('.topo').scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
   }
 }
 

@@ -134,3 +134,7 @@ button.btn-dourado {cursor:pointer}
 .detalhe-proximo .voltar-link {margin:0}
 @media(max-width:750px){.detalhe-grid,.cantigas-grid {grid-template-columns:1fr}.detalhe-hero {padding:36px 0 75px}.voltar-link {margin-bottom:44px}.detalhe-ornamento {right:-10%;top:35%;opacity:.5}.detalhe-proximo-inner {align-items:flex-start;flex-direction:column}.detalhe-secao {padding:65px 0}}
 @media(prefers-reduced-motion:no-preference){.detalhe-hero-inner {animation:appear .8s ease both}}
+
+
+/* Quando a quantidade de cards é ímpar, o último ocupa a linha inteira (sem espaço vazio) */
+.cantigas-grid .cantiga-card:last-child:nth-child(odd) {grid-column:1 / -1}

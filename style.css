@@ -75,18 +75,7 @@ button.btn-dourado {cursor:pointer}
 .timeline-actions {padding:18px 12px 85px 88px;max-width:1140px}
 .btn-recolher {display:inline-block;border:1px solid var(--gold);color:var(--gold);background:transparent;border-radius:7px;font-weight:700;padding:12px 22px;transition:background .25s ease,transform .25s ease,color .25s ease}
 .btn-recolher:hover {background:var(--gold);color:var(--bg);transform:translateY(-2px)}
-/* Espaço para a fotografia da turma, independente da linha do tempo */
-.turma {scroll-margin-top:86px;padding:clamp(65px,8vw,115px) 0;background:linear-gradient(145deg,#26221d,#191714);border-top:1px solid var(--line)}
-.turma-layout {max-width:1140px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(28px,5vw,80px);align-items:center}
-.turma h2 {font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.18;margin-bottom:18px}
-.turma p {color:var(--muted);max-width:400px}
-.turma-foto {aspect-ratio: 16/10;min-height:270px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#332a22,#26211d);box-shadow:0 16px 35px rgba(0,0,0,.18)}
-.turma-foto img {display:block;width:100%;height:100%;object-fit:cover}
-.foto-placeholder {width:100%;height:100%;min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:35px;text-align:center;color:var(--muted)}
-.foto-placeholder strong {font-size:1.1rem;color:var(--cream)}
-.foto-placeholder span:last-child {font-size:.9rem}
-.foto-icon {font-family:Georgia,serif;font-size:4rem;line-height:1;color:var(--gold)}
-@media(max-width:750px) {.turma-layout {grid-template-columns:1fr}.timeline-actions {padding-left:56px}.turma-foto {min-height:220px}}
+@media(max-width:750px) {.timeline-actions {padding-left:56px}}
 @media(prefers-reduced-motion:reduce) {#periodos:not([hidden]) {animation:none}}
 
 
